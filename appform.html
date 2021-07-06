@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>SPAMS</title>
+        <link rel="stylesheet" href="style.css">  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+        
+    </head>
+    <body>
+        <div class="regform">
+            <h1> Application Form</h1>
+           <div class="main">
+               <form method="POST" action="">
+            <h2 class="name"> Name</h2>
+            <input class="firstname" type="text" name="first_name">
+            <label class="firstlabel"> Firstname</label>
+            <input class="lastname" type="text" name="last_name">
+            <label class="lastlabel"> Lastname</label><br></br>
+            <h2 class="name"> Parents</h2>
+            <input class="Fname" type="text" name="father_name">
+            <label class="flabel"> Father's name</label>
+            <input class="mname" type="text" name="mother_name">
+            <label class="mlabel"> Mother's name</label><br>
+        </div>
+        <h2 class="name"> Date of Birth</h2>
+        <input class="dob" type="text" name="dob">
+        <label class="doblab"> Date of Birth</label>
+        
+           
+        <h2 class="name"> Address</h2>
+            <input class="doorno" type="text" name="door_no">
+            <label class="doorlabel"> Door no</label>
+            <input class="streetname" type="text" name="street_name">
+            <label class="streetlabel"> Street Name</label><br></br><br>
+            <input class="cname" type="text" name="city_name">
+            <label class="clabel"> City name</label>
+            <input class="disname" type="text" name="district_name">
+            <label class="dislabel">District</label><br></br><br>
+            <input class="stname" type="text" name="state_name">
+            <label class="statelabel"> State</label>
+            <h2 class="name"> Gender</h2>
+            <label class="radio">
+            <input class="radio-one" type="radio" checked="checked" name="">
+            <span class="checkmark"></span>
+            Male</label>
+            <label class="radio">
+                <input class="radio-two" type="radio"  name="">
+                <span class="checkmark"></span>
+                Female</label>
+            <h2 class="name">Department</h2><br><br>
+            <select class="option" name="dep">
+                <option>   --- Choose Department</option>
+                <option> ECE </option>
+                <option> EEE </option>
+                <option> CSE </option>
+                <option> MCA </option>
+                <option> MBA </option>
+                <option> ME(St) </option>
+                <option> MECH </option>
+                <option> ME(Ar) </option>
+            </select>
+            <label class="oplab"></label>
+            <select class="option" name="year">
+                <option>  --select year--</option>
+                <option> I </option>
+                <option> II </option>
+                <option> III </option>
+                <option> IV </option>
+                </select>
+                <label class="ylab"></label>
+            <h2 class="name"> Contact</h2>
+            <input class="number" type="text" name="mobile">
+            <label class="phone" > Mobile number</label>
+           
+            <input class="email" type="text" name="email">
+            <label class="emaillab"> Email</label><br></br>
+           
+            <h2 class="name"> Local Guardian</h2>
+            <input class="gname" type="text" name="g_name">
+            <label class="glabel"> Guardian name</label>
+            <input class="add" type="text" name="add">
+            <label class="addlabel"> Address</label><br></br><br>
+            <button class="sub" type="submit"> Submit</button>
+            <label class="submit"> </label>
+            </div>
+        </form>
+
+    </body>
+</html>
+<?php
+session_start();
+include('includes/config.php');
+if(isset($_POST['submit']))
+{
+$regno=$_POST['regno'];
+$fname=$_POST['fname'];
+$mname=$_POST['mname'];
+$lname=$_POST['lname'];
+$gender=$_POST['gender'];
+$contactno=$_POST['contact'];
+$emailid=$_POST['email'];
+$password=$_POST['password'];
+$query="insert into register(regNo,firstName,middleName,lastName,gender,contactNo,email,password) values(?,?,?,?,?,?,?,?)";
+$stmt = $mysqli->prepare($query);
+$rc=$stmt->bind_param('sssssiss',$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$password);
+$stmt->execute();
+echo"<script>alert('Student Succssfully register');</script>";
+}
+?>

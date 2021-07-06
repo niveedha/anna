@@ -1,0 +1,416 @@
+ 
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.5),#009688), url(img/pics.jpg);
+}
+.menu-bar{
+    background: yellow;
+    text-align: center;
+    color:white;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+text-decoration: none;
+color:white;
+}
+.active, .menu-bar ul li:hover{
+background: #2bba0d;
+border-radius: 3px;
+}
+.menu-bar .fa{
+margin-right: 3px;
+}
+.sub-menu-1{
+display: none;
+}
+.menu-bar ul li:hover  .sub-menu-1{
+display: block;
+position: absolute;
+background: rgb(0,100,0);
+margin-top: 15px;
+margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+display: block;
+margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+width:150px;
+padding: 10px;
+border-bottom: 1px dotted #fff;
+background: transparent;
+border-radius: 0;
+text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:#b2ff00;
+}
+.about{
+    max-width: 1000px;
+    margin: auto;
+    overflow: auto;
+
+}
+.gallery{
+    margin:5px;
+    border:1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+.desc{
+    padding:15px;
+    color: white;
+    text-align: center;
+}
+.para{
+    color:white;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+.regform{
+    width: 800px;
+    background-color: rgb(0,0,0,0.6);
+    margin: auto;
+    color:#FFFFFF;
+    padding:10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+.main{
+    background-color: rgb(0,0,0,0.5);
+    width: 800px;
+    margin: auto;
+}
+form{
+    padding: 10px;
+}
+#name{
+    width:100%;
+    height: 100%;
+}
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+.firstname{
+    position: relative;
+    left: 100px;
+    top:-37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.firstlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 145px;
+    top: -5px;
+}
+.lastname{
+    position: relative;
+    left: 150px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.lastlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 90px;
+    top: -5px;
+}
+
+.fname{
+    position: relative;
+    left: 130px;
+    top:-37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.flabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 118px;
+    top: -5px;
+}
+.mname{
+    position: relative;
+    left: 150px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.mlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 90px;
+    top: -5px;
+}
+.dob{
+    position: relative;
+    right: 50px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.doblab{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 300px;
+    top: -5px;
+}
+.doorno{
+    position: relative;
+    right: -105px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.doorlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 135px;
+    top: -5px;
+}
+.streetname{
+    position: relative;
+    right: -160px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.streetlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 80px;
+    top: -5px;
+}
+.cname{
+    position: relative;
+    right: -98px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.clabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 142px;
+    top: -5px;
+}
+.disname{
+    position: relative;
+    right: -140px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.dislabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 100px;
+    top: -5px;
+}
+.stname{
+    position: relative;
+    left: -70px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.statelabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 310px;
+    top: -5px;
+}
+.number{
+    position: relative;
+    left: 115px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.phone{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 120px;
+    top: -5px;
+}
+.email{
+    position: relative;
+    left: 115px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.emaillab{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 120px;
+    top: -5px;
+}
+.sub{
+    position: relative;
+    left: 0px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.submit{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 310px;
+    top: -5px;
+}
+.option{
+    position: relative;
+    left: 0px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.oplab{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 310px;
+    top: -5px;
+}
+.ylab{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 310px;
+    top: -5px;
+}
+.gname{
+    position: relative;
+    left: 120px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.glabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 120px;
+    top: -5px;
+}
+.add{
+    position: relative;
+    left: 120px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.addlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 120px;
+    top: -5px;
+}
+.reason{
+    position: relative;
+    left: -75px;
+    top: -45px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.rlab{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    right: 20px;
+    top: -5px;
+}

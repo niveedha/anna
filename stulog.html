@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>SPAMS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .container{
+                top: 70%;
+                left: 50%;
+                color:white;
+                position: absolute;
+                transform: translate(-50%,-50%);
+            }
+            .container h1{
+                text-align: center;
+                margin-top:10px;
+            }
+            .card{
+                padding: 60px 40px 50px 40px;
+                background: rgb(50,50,50);
+                border-radius: 10px;
+            }
+            #name{
+                width: 200px;
+                border:none;
+                background: transparent;
+                border-bottom: 1px solid white;
+                padding:6px;
+                color: white;
+                margin-bottom: 20px;
+            }
+            #button{
+                border-radius: 20px;
+                padding: 10px 20px;
+                background: green;
+                color:white;
+                margin-top: 20px;
+                margin-left: 50px;
+                border: none;
+                outline: none;
+            }
+            img{
+                border-radius: 50%;
+                position: absolute;
+                margin-left: 100px;
+                margin-top: -100px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="menu-bar">
+            <h1> ANNA UNIVERSITY REGIONAL CAMPUS - TIRUNELVELI </h1>
+        <ul> 
+            <li><a href="index.html"> <i class="fa fa-home"></i>Home</a></li>
+            <li><a href="gallery.html"> <i class="fa fa-list-alt"></i>Gallery</a></li>
+            <li> <a href="#"> <i class="fa fa-info" ></i>Staff Details</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li> <a href="staffboyh.html"> Boys Hostel</a></li>
+                        <li> <a href="staffgirlh.html"> Girls Hostel</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="active"><a href="#"> <i class="fa fa-users" ></i>Login</a>
+                <div class="sub-menu-1">
+                   
+                </div>
+            </li>
+            <li> <a href="fac.html"><i class="fa fa-clone" ></i>Facilities</a>
+            </li>
+            <li><a href="contact.html"><i class="fa fa-phone" ></i>Contact Us</a></li>
+        </ul>
+        </div>
+        
+        <div class="container">
+            <h1> STUDENT LOGIN</h1>
+            <img src="img/user.jpg" height="70" width="70">
+            <form method="POST" action="student1.php">
+            <div class="card">
+                <input type="text" placeholder="Username" id="name"><br>
+                <input type="password" placeholder="Password" id="name"><br>
+                <input type="submit" placeholder="Submit" id="button">
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
